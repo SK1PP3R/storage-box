@@ -8,7 +8,7 @@ fi
 
 if [ "$SMB_ENABLE" = true ]; then
 apt install samba -y
-sudo rm /etc/samba/smb.conf && sudo tee /etc/samba/smb.conf > /dev/null <<EOF
+rm /etc/samba/smb.conf && tee /etc/samba/smb.conf > /dev/null <<EOF
 [global]
 port = ${SMB_PORT}
 workgroup = WORKGROUP
