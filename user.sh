@@ -5,3 +5,4 @@ fi
 if [ ! "$(id -g steam)" -eq "$GID" ]; then 
         groupmod -o -g "$GID" steam ; 
 fi
+tail -f /var/log/auth.log
