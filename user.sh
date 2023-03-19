@@ -10,6 +10,7 @@ if [ "$SMB_ENABLE" = true ]; then
         apt install samba -y
 sudo rm /etc/samba/smb.conf && sudo tee /etc/samba/smb.conf > /dev/null <<EOF
 [global]
+port = ${SMB_PORT}
 workgroup = WORKGROUP
 log file = /var/log/samba/log.%m
 max log size = 1000
