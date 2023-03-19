@@ -46,6 +46,6 @@ if [ "$SMB_ENABLE" = true ]; then
            read only = yes
            guest ok = no
         EOF
-        fi
+fi
 
 watch -n3 "ls -la /root"
