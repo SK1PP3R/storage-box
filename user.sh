@@ -11,7 +11,7 @@ apt install samba -y
 rm /etc/samba/smb.conf
 
 echo '[global]
-port = "${SMB_PORT}"
+port = ${SMB_PORT}
 workgroup = WORKGROUP
 log file = /var/log/samba/log.%m
 max log size = 1000
