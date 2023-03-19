@@ -7,8 +7,8 @@ if [ ! "$(id -g steam)" -eq "$GID" ]; then
 fi
 
 if [ "$SMB_ENABLE" = true ]; then
-        apt install samba -y
-        rm /etc/samba/smb.conf && tee /etc/samba/smb.conf > /dev/null <<EOF
+apt install samba -y
+rm /etc/samba/smb.conf && tee /etc/samba/smb.conf > /dev/null <<EOF
         [global]
         port = ${SMB_PORT}
         workgroup = WORKGROUP
@@ -45,7 +45,7 @@ if [ "$SMB_ENABLE" = true ]; then
            browseable = yes
            read only = yes
            guest ok = no
-        EOF
+EOF
 fi
 
 watch -n3 "ls -la /root"
