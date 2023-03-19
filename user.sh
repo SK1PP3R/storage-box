@@ -10,7 +10,7 @@ if [ "$SMB_ENABLE" = true ]; then
 apt install samba -y
 rm /etc/samba/smb.conf
 
-echo '[global]
+echo "[global]
 port = ${SMB_PORT}
 workgroup = WORKGROUP
 log file = /var/log/samba/log.%m
@@ -45,7 +45,7 @@ usershare allow guests = yes
    path = /var/lib/samba/printers
    browseable = yes
    read only = yes
-   guest ok = no' | tee /etc/samba/smb.conf > /dev/null
+   guest ok = no" | tee /etc/samba/smb.conf > /dev/null
 fi
 
 watch -n3 "ls -la /root"
